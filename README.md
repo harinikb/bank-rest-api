@@ -1,6 +1,18 @@
-# Setup
+# Banks REST API
+REST API server to retrieve banks and branches with Flask, PostgreSQL.
 
-1. Creating Database in PostgreSQL. Connect to PostgreSQL instance and create `banks_dump` database.
+## Pre-requisites
+- Python 3.11
+- pip 22.3.1
+- PostgreSQL 15
+
+## Setup
+1. To install python dependencies
+```bash
+$ pip install -r requirements.txt
+```
+
+2. Creating Database in PostgreSQL. Connect to PostgreSQL instance and create `banks_dump` database.
 ```
 # CREATE DATABASE banks_dump;
 ```
@@ -14,6 +26,9 @@ $ psql -U <user_name> -d banks_dump -f .\database\tables.sql
 ```bash
 $ psql -U postgres -d banks_dump -f .\database\banks.sql
 $ psql -U postgres -d banks_dump -f .\database\branches.sql
-
+```
+4. To start the HTTP server
+```bash
+$ python run.py
 ```
 
