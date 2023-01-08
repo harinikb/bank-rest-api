@@ -1,13 +1,9 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from sqlalchemy.ext.declarative import declarative_base
 
 rest_api_app = Flask(__name__)
 rest_api_app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:admin@localhost:5432/banks_dump"
 db_handler = SQLAlchemy(rest_api_app)
-migrate = Migrate(rest_api_app, db_handler)
-Base = declarative_base()
 Column = db_handler.Column
 
 
