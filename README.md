@@ -31,4 +31,14 @@ $ psql -U postgres -d banks_dump -f .\database\branches.sql
 ```bash
 $ python run.py
 ```
+This should start the HTTP server on port 5000.
+
+## Endpoints
+### 1. Banks
+- `GET` /banks - To retrieve list of all banks
+- `GET` /banks/{id} - To retrieve bank details of the specified `id`
+### 2. Branches
+- `GET` /banks/{id}/branches - To retrieve list of all branches for the specified bank `id`
+- `GET` /banks/{id}/branches/{ifsc-code} - To retrieve details for a specified branch's IFSC code matching the bank `id`
+
 
