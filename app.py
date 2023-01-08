@@ -86,17 +86,6 @@ def bank_branch(bank_id, branch_id):
         "bank_name": branch.bank_name
     }
 
-    return [{
-        "ifsc": row[0],
-        "bank_id": row[1],
-        "branch": row[2],
-        "address": row[3],
-        "city": row[4],
-        "district": row[5],
-        "state": row[6],
-        "bank_name": row[7]
-    } for row in b]
-
 
 if __name__ == "__main__":
     rest_api_app.run(debug=True)
