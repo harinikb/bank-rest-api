@@ -17,17 +17,17 @@ $ pip install -r requirements.txt
 # CREATE DATABASE banks_dump;
 ```
 
-2. To create tables associated tables
+3. To create tables associated tables
 ```bash
 $ psql -U <user_name> -d banks_dump -f .\database\tables.sql
 ```
 
-3. To seed data into the database instance
+4. To seed data into the database instance
 ```bash
 $ psql -U postgres -d banks_dump -f .\database\banks.sql
 $ psql -U postgres -d banks_dump -f .\database\branches.sql
 ```
-4. To start the HTTP server
+5. To start the HTTP server
 ```bash
 $ python run.py
 ```
